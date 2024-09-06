@@ -1,11 +1,11 @@
 {
   "domain": "dahua",
-  "name": "Dahua",
+  "name": "Dahua-empiretech",
   "iot_class": "local_polling",
   "documentation": "https://github.com/rroller/dahua",
   "issue_tracker": "https://github.com/rroller/dahua/issues",
   "dependencies": [],
-  "version": "0.9.60",
+  "version": "1.0.0",
   "config_flow": true,
   "codeowners": [
     "@rroller"
