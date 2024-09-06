@@ -108,7 +108,8 @@ class DahuaDataUpdateCoordinator(DataUpdateCoordinator):
         ssl_context.verify_mode = ssl.CERT_NONE
         connector = TCPConnector(enable_cleanup_closed=True, ssl=ssl_context)
         self._session = ClientSession(connector=connector)
-
+        #test allo test
+        
         # The client used to communicate with Dahua devices
         self.client: DahuaClient = DahuaClient(username, password, address, port, rtsp_port, self._session)
 
