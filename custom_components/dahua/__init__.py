@@ -59,6 +59,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         hass.data.setdefault(DOMAIN, {})
         _LOGGER.info(STARTUP_MESSAGE)
 
+    username = "test"
     username = entry.data.get(CONF_USERNAME)
     password = entry.data.get(CONF_PASSWORD)
     address = entry.data.get(CONF_ADDRESS)
