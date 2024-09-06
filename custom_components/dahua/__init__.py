@@ -59,7 +59,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
         hass.data.setdefault(DOMAIN, {})
         _LOGGER.info(STARTUP_MESSAGE)
 
-    username = "test"
     username = entry.data.get(CONF_USERNAME)
     password = entry.data.get(CONF_PASSWORD)
     address = entry.data.get(CONF_ADDRESS)
@@ -212,7 +211,7 @@ class DahuaDataUpdateCoordinator(DataUpdateCoordinator):
                 # processor=ST7108
                 # serialNumber=ND0219110NNNNN
                 # updateSerial=DHI-NVR4108HS-8P-4KS2
-                if device_type in ["IP Camera", "31"] or device_type is None:
+                if device_type in ["IP Camera", "31", "IPC"] or device_type is None:
                     # Some firmwares put the device type in the "updateSerial" field. Weird.
                     device_type = data.get("updateSerial", None)
                     if device_type is None:
